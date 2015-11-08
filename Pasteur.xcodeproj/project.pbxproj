@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70457431BED9ADB003EAAD4 /* SharedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70457421BED9ADB003EAAD4 /* SharedPoint.swift */; };
+		B70457451BEDAE06003EAAD4 /* SharedBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70457441BEDAE06003EAAD4 /* SharedBrowser.swift */; };
 		B7A26FC11BED3FD600D5170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FC01BED3FD600D5170A /* AppDelegate.swift */; };
-		B7A26FC31BED3FD600D5170A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FC21BED3FD600D5170A /* ViewController.swift */; };
+		B7A26FC31BED3FD600D5170A /* SharedBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FC21BED3FD600D5170A /* SharedBrowserViewController.swift */; };
 		B7A26FC51BED3FD600D5170A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A26FC41BED3FD600D5170A /* Assets.xcassets */; };
 		B7A26FC81BED3FD600D5170A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A26FC61BED3FD600D5170A /* Main.storyboard */; };
 		B7A26FD31BED3FD600D5170A /* PasteurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FD21BED3FD600D5170A /* PasteurTests.swift */; };
@@ -33,9 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B70457421BED9ADB003EAAD4 /* SharedPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedPoint.swift; sourceTree = "<group>"; };
+		B70457441BEDAE06003EAAD4 /* SharedBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedBrowser.swift; sourceTree = "<group>"; };
 		B7A26FBD1BED3FD600D5170A /* Pasteur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pasteur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A26FC01BED3FD600D5170A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B7A26FC21BED3FD600D5170A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7A26FC21BED3FD600D5170A /* SharedBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedBrowserViewController.swift; sourceTree = "<group>"; };
 		B7A26FC41BED3FD600D5170A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A26FC71BED3FD600D5170A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7A26FC91BED3FD600D5170A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,10 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				B7A26FC01BED3FD600D5170A /* AppDelegate.swift */,
-				B7A26FC21BED3FD600D5170A /* ViewController.swift */,
+				B7A26FC21BED3FD600D5170A /* SharedBrowserViewController.swift */,
 				B7A26FC41BED3FD600D5170A /* Assets.xcassets */,
 				B7A26FC61BED3FD600D5170A /* Main.storyboard */,
 				B7A26FC91BED3FD600D5170A /* Info.plist */,
+				B70457421BED9ADB003EAAD4 /* SharedPoint.swift */,
+				B70457441BEDAE06003EAAD4 /* SharedBrowser.swift */,
 			);
 			path = Pasteur;
 			sourceTree = "<group>";
@@ -252,8 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A26FC31BED3FD600D5170A /* ViewController.swift in Sources */,
+				B7A26FC31BED3FD600D5170A /* SharedBrowserViewController.swift in Sources */,
+				B70457451BEDAE06003EAAD4 /* SharedBrowser.swift in Sources */,
 				B7A26FC11BED3FD600D5170A /* AppDelegate.swift in Sources */,
+				B70457431BED9ADB003EAAD4 /* SharedPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +483,7 @@
 				B7A26FE41BED3FD600D5170A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7A26FE51BED3FD600D5170A /* Build configuration list for PBXNativeTarget "PasteurTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +492,7 @@
 				B7A26FE71BED3FD600D5170A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7A26FE81BED3FD600D5170A /* Build configuration list for PBXNativeTarget "PasteurUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +501,7 @@
 				B7A26FEA1BED3FD600D5170A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
