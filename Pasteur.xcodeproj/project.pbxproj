@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B70457431BED9ADB003EAAD4 /* SharedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70457421BED9ADB003EAAD4 /* SharedPoint.swift */; };
 		B70457451BEDAE06003EAAD4 /* SharedBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70457441BEDAE06003EAAD4 /* SharedBrowser.swift */; };
+		B73EFA201BF02500002A4D37 /* ClipboardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EFA1F1BF02500002A4D37 /* ClipboardSpec.swift */; };
+		B73EFA221BF02644002A4D37 /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EFA211BF02644002A4D37 /* Clipboard.swift */; };
 		B7A26FC11BED3FD600D5170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FC01BED3FD600D5170A /* AppDelegate.swift */; };
 		B7A26FC31BED3FD600D5170A /* SharedBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FC21BED3FD600D5170A /* SharedBrowserViewController.swift */; };
 		B7A26FC51BED3FD600D5170A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A26FC41BED3FD600D5170A /* Assets.xcassets */; };
