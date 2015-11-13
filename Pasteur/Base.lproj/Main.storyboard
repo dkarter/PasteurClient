@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="zVs-R2-jAR">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
@@ -666,6 +666,193 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="g9a-Uc-i5k">
+            <objects>
+                <windowController id="0Gk-m4-7Ca" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="FED-Cy-7Tv">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                    </window>
+                    <connections>
+                        <segue destination="Sas-ca-LNI" kind="relationship" relationship="window.shadowedContentViewController" id="v3y-p5-SEt"/>
+                    </connections>
+                </windowController>
+                <customObject id="XiU-jS-2PO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="448"/>
+        </scene>
+        <!--Sockets View Controller-->
+        <scene sceneID="p9r-YD-ojN">
+            <objects>
+                <viewController id="Sas-ca-LNI" customClass="SocketsViewController" customModule="Pasteur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="6Xt-CJ-AeH">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="413"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-3B-uEK">
+                                <rect key="frame" x="36" y="376" width="59" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="message" id="4Iu-uM-83r">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pke-lF-JGH">
+                                <rect key="frame" x="38" y="346" width="410" height="22"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="mbA-aQ-dNb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0o-mJ-rIV">
+                                <rect key="frame" x="379" y="310" width="70" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="F5R-Ha-RiB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="sendButtonClicked:" target="Sas-ca-LNI" id="ZTl-eD-G9c"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79i-MK-gMi">
+                                <rect key="frame" x="32" y="310" width="90" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rWY-LL-FlJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="connectButtonClicked:" target="Sas-ca-LNI" id="274-uz-fCV"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nEC-fZ-oWZ">
+                                <rect key="frame" x="36" y="248" width="138" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Press connect to start" id="ZII-bI-Mrp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xPG-8n-Aqk">
+                                <rect key="frame" x="36" y="273" width="47" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Status:" id="ccJ-6g-oDv">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3da-WM-3o0">
+                                <rect key="frame" x="38" y="10" width="410" height="230"/>
+                                <animations/>
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="xU8-5g-FJi">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="Pke-lF-JGH" id="LVe-wC-H89"/>
+                        <outlet property="messagesLogTextField" destination="3da-WM-3o0" id="zn9-4F-pCO"/>
+                        <outlet property="statusLabel" destination="nEC-fZ-oWZ" id="jox-h7-lKI"/>
+                    </connections>
+                </viewController>
+                <customObject id="4v4-d2-zbq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="955.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="uzj-T8-c4G">
+            <objects>
+                <windowController id="zVs-R2-jAR" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="dwL-Jl-f5F">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <toolbar key="toolbar" implicitIdentifier="179F400B-A079-4006-A827-CED4331C4093" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="rYa-oE-z0d">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="C837C215-AC2D-4E2D-9C15-E74C05BC842E" label="Notifications" paletteLabel="Notifications" tag="-1" image="NotificationIcon" id="dS1-6c-hcd"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="xpf-KF-QuH"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="x60-2i-Iew"/>
+                                <toolbarItem implicitItemIdentifier="CB7D0C40-D3AE-4B9A-BE93-A9A7B7E5E0AA" label="Advanced" paletteLabel="Advanced" tag="-1" image="SettingsIcon" id="GfW-by-ltd"/>
+                                <toolbarItem implicitItemIdentifier="FB729B68-F9E7-4EE8-85B4-02E232601E31" label="Peers" paletteLabel="Peers" tag="-1" image="Peers" id="3KE-sc-0VN"/>
+                                <toolbarItem implicitItemIdentifier="CA47EFBD-7F3B-4CAF-B1A2-29CE8C5B99BC" label="Shortcuts" paletteLabel="Shortcuts" tag="-1" image="ShortcutIcon" id="IKf-el-zL2"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="3KE-sc-0VN"/>
+                                <toolbarItem reference="IKf-el-zL2"/>
+                                <toolbarItem reference="dS1-6c-hcd"/>
+                                <toolbarItem reference="x60-2i-Iew"/>
+                                <toolbarItem reference="GfW-by-ltd"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                    </window>
+                    <connections>
+                        <segue destination="vxS-xa-YGC" kind="relationship" relationship="window.shadowedContentViewController" id="fWj-C7-jVe"/>
+                    </connections>
+                </windowController>
+                <customObject id="2Ve-rL-1tZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="1864"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kQM-rz-FkC">
+            <objects>
+                <viewController id="gje-yP-jCz" sceneMemberID="viewController">
+                    <view key="view" id="QJW-Su-jdY">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-iP-rpu">
+                                <rect key="frame" x="139" y="191" width="61" height="18"/>
+                                <animations/>
+                                <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="kA1-zR-DD2">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q9I-25-hfR">
+                                <rect key="frame" x="139" y="155" width="61" height="18"/>
+                                <animations/>
+                                <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="HS5-rD-2I7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="ltt-YA-y4f" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="2394"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="NMA-Ih-2BV">
+            <objects>
+                <viewController title="Preferences" id="vxS-xa-YGC" sceneMemberID="viewController">
+                    <view key="view" id="dDy-Jh-knW">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </view>
+                </viewController>
+                <customObject id="5lQ-TB-IX8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="2409"/>
+        </scene>
         <!--Shared Browser View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
@@ -677,7 +864,7 @@
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guw-eH-SLx">
                                 <rect key="frame" x="127" y="0.0" width="415" height="365"/>
                                 <clipView key="contentView" id="8rE-jp-XHp">
-                                    <rect key="frame" x="1" y="23" width="413" height="341"/>
+                                    <rect key="frame" x="1" y="0.0" width="413" height="364"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="H0o-P2-C3j" id="85H-EP-SGs">
@@ -751,12 +938,12 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <animations/>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.22413793103448276" horizontal="YES" id="7KE-LM-5jf">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.051724137931034482" horizontal="YES" id="7KE-LM-5jf">
                                     <rect key="frame" x="1" y="348" width="413" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="wT0-u3-xby">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="wT0-u3-xby">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -834,97 +1021,11 @@
             </objects>
             <point key="canvasLocation" x="4" y="728.5"/>
         </scene>
-        <!--Window Controller-->
-        <scene sceneID="onb-CD-FF2">
-            <objects>
-                <windowController id="Rlg-ZD-l3x" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ait-zS-u18">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="87"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-                    </window>
-                    <connections>
-                        <segue destination="rVy-0t-YfP" kind="relationship" relationship="window.shadowedContentViewController" id="2hc-Fk-1fh"/>
-                    </connections>
-                </windowController>
-                <customObject id="2V3-2T-At2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="631" y="226.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="AUE-3G-1TQ">
-            <objects>
-                <viewController id="rVy-0t-YfP" sceneMemberID="viewController">
-                    <view key="view" id="Zqh-8P-146">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="121"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yae-Jx-8nz">
-                                <rect key="frame" x="8" y="59" width="98" height="17"/>
-                                <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Name Machine:" id="bbh-da-paK">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhY-78-jYg">
-                                <rect key="frame" x="112" y="56" width="348" height="22"/>
-                                <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="9MP-fk-ipb">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hIH-an-779">
-                                <rect key="frame" x="396" y="13" width="70" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tEp-z2-ZiM">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSY-b8-dxa">
-                                <rect key="frame" x="314" y="13" width="82" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P2L-um-F2L">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                                </buttonCell>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fa6-cT-Rq0">
-                                <rect key="frame" x="214" y="87" width="76" height="21"/>
-                                <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="neptune.chi" id="fxv-EV-5B4">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VtJ-RA-2jM">
-                                <rect key="frame" x="191" y="86" width="21" height="26"/>
-                                <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="🔵" id="7ge-QW-i8G">
-                                    <font key="font" size="13" name="AppleColorEmoji"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <animations/>
-                    </view>
-                </viewController>
-                <customObject id="Pna-mY-Nuq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="603" y="518.5"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="NotificationIcon" width="300" height="300"/>
+        <image name="Peers" width="300" height="300"/>
+        <image name="SettingsIcon" width="300" height="300"/>
+        <image name="ShortcutIcon" width="300" height="300"/>
+    </resources>
 </document>
