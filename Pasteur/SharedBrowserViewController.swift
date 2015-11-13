@@ -50,7 +50,6 @@ class SharedBrowserViewController: NSViewController {
   }
   
   func reloadSharedPointsTable() {
-    NSLog("Yeeehhaaa")
     sharedPointsTable.reloadData()
   }
   
@@ -59,12 +58,6 @@ class SharedBrowserViewController: NSViewController {
     sharedPointsTable.target = self
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadSharedPointsTable", name: "NewSharedDetected", object: sharedBrowser)
     
-  }
-  
-  override var representedObject: AnyObject? {
-    didSet {
-      // Update the view, if already loaded.
-    }
   }
 }
 
