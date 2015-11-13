@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4F056E166C22BEF57FD24C /* Pods_PasteurUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA7A267D3EB113D02E7D968 /* Pods_PasteurUITests.framework */; };
+		56E51465F45F0210F8769C48 /* Pods_PasteurTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFCD7384FBD03DF00C0E5D /* Pods_PasteurTests.framework */; };
 		B70457431BED9ADB003EAAD4 /* SharedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70457421BED9ADB003EAAD4 /* SharedPoint.swift */; };
 		B70457451BEDAE06003EAAD4 /* SharedBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70457441BEDAE06003EAAD4 /* SharedBrowser.swift */; };
+		B72C0FE31BEFBF48009D12F4 /* PasteurClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C0FE21BEFBF48009D12F4 /* PasteurClient.swift */; };
+		B72C0FE51BEFD867009D12F4 /* ClipboardSyncronizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C0FE41BEFD867009D12F4 /* ClipboardSyncronizerSpec.swift */; };
 		B73EFA201BF02500002A4D37 /* ClipboardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EFA1F1BF02500002A4D37 /* ClipboardSpec.swift */; };
 		B73EFA221BF02644002A4D37 /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73EFA211BF02644002A4D37 /* Clipboard.swift */; };
 		B7A26FC11BED3FD600D5170A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FC01BED3FD600D5170A /* AppDelegate.swift */; };
@@ -17,6 +21,8 @@
 		B7A26FC81BED3FD600D5170A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A26FC61BED3FD600D5170A /* Main.storyboard */; };
 		B7A26FD31BED3FD600D5170A /* PasteurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FD21BED3FD600D5170A /* PasteurTests.swift */; };
 		B7A26FDE1BED3FD600D5170A /* PasteurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A26FDD1BED3FD600D5170A /* PasteurUITests.swift */; };
+		B7AFCC001BEF36BE00C82E62 /* SocketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AFCBFF1BEF36BE00C82E62 /* SocketsViewController.swift */; };
+		CDD928092F0DAE900D275C71 /* Pods_Pasteur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368A0AA2C1589608EFCFE744 /* Pods_Pasteur.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01D987B40D213ED34A278E8E /* Pods-Pasteur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pasteur.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pasteur/Pods-Pasteur.release.xcconfig"; sourceTree = "<group>"; };
+		1C1BFAD43E916A231F6FF493 /* Pods-Pasteur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pasteur.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pasteur/Pods-Pasteur.debug.xcconfig"; sourceTree = "<group>"; };
+		2ABFCD7384FBD03DF00C0E5D /* Pods_PasteurTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasteurTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		368A0AA2C1589608EFCFE744 /* Pods_Pasteur.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pasteur.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA7A267D3EB113D02E7D968 /* Pods_PasteurUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasteurUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70457421BED9ADB003EAAD4 /* SharedPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedPoint.swift; sourceTree = "<group>"; };
 		B70457441BEDAE06003EAAD4 /* SharedBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedBrowser.swift; sourceTree = "<group>"; };
+		B72C0FE21BEFBF48009D12F4 /* PasteurClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteurClient.swift; sourceTree = "<group>"; };
+		B72C0FE41BEFD867009D12F4 /* ClipboardSyncronizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardSyncronizerSpec.swift; sourceTree = "<group>"; };
+		B73EFA1F1BF02500002A4D37 /* ClipboardSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardSpec.swift; sourceTree = "<group>"; };
+		B73EFA211BF02644002A4D37 /* Clipboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		B7A26FBD1BED3FD600D5170A /* Pasteur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pasteur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A26FC01BED3FD600D5170A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A26FC21BED3FD600D5170A /* SharedBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedBrowserViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +66,11 @@
 		B7A26FD91BED3FD600D5170A /* PasteurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasteurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A26FDD1BED3FD600D5170A /* PasteurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteurUITests.swift; sourceTree = "<group>"; };
 		B7A26FDF1BED3FD600D5170A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7AFCBFF1BEF36BE00C82E62 /* SocketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketsViewController.swift; sourceTree = "<group>"; };
+		BD33543CA8B61055EAC899FA /* Pods-PasteurTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasteurTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasteurTests/Pods-PasteurTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF966C269111F69F8468A5C9 /* Pods-PasteurUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasteurUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PasteurUITests/Pods-PasteurUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE3FB6706D5CA6A728D61BB7 /* Pods-PasteurUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasteurUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PasteurUITests/Pods-PasteurUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E7950704B4D01AF0732EDCA1 /* Pods-PasteurTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasteurTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PasteurTests/Pods-PasteurTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD928092F0DAE900D275C71 /* Pods_Pasteur.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E51465F45F0210F8769C48 /* Pods_PasteurTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +94,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4F056E166C22BEF57FD24C /* Pods_PasteurUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C72FEE836D8E6D749132F9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				368A0AA2C1589608EFCFE744 /* Pods_Pasteur.framework */,
+				2ABFCD7384FBD03DF00C0E5D /* Pods_PasteurTests.framework */,
+				7CA7A267D3EB113D02E7D968 /* Pods_PasteurUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7A26FB41BED3FD600D5170A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +118,8 @@
 				B7A26FD11BED3FD600D5170A /* PasteurTests */,
 				B7A26FDC1BED3FD600D5170A /* PasteurUITests */,
 				B7A26FBE1BED3FD600D5170A /* Products */,
+				D6B865D11703D0C3E036148B /* Pods */,
+				1C72FEE836D8E6D749132F9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +143,9 @@
 				B7A26FC91BED3FD600D5170A /* Info.plist */,
 				B70457421BED9ADB003EAAD4 /* SharedPoint.swift */,
 				B70457441BEDAE06003EAAD4 /* SharedBrowser.swift */,
+				B7AFCBFF1BEF36BE00C82E62 /* SocketsViewController.swift */,
+				B72C0FE21BEFBF48009D12F4 /* PasteurClient.swift */,
+				B73EFA211BF02644002A4D37 /* Clipboard.swift */,
 			);
 			path = Pasteur;
 			sourceTree = "<group>";
@@ -115,8 +153,10 @@
 		B7A26FD11BED3FD600D5170A /* PasteurTests */ = {
 			isa = PBXGroup;
 			children = (
+				B73EFA1F1BF02500002A4D37 /* ClipboardSpec.swift */,
 				B7A26FD21BED3FD600D5170A /* PasteurTests.swift */,
 				B7A26FD41BED3FD600D5170A /* Info.plist */,
+				B72C0FE41BEFD867009D12F4 /* ClipboardSyncronizerSpec.swift */,
 			);
 			path = PasteurTests;
 			sourceTree = "<group>";
@@ -130,6 +170,19 @@
 			path = PasteurUITests;
 			sourceTree = "<group>";
 		};
+		D6B865D11703D0C3E036148B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C1BFAD43E916A231F6FF493 /* Pods-Pasteur.debug.xcconfig */,
+				01D987B40D213ED34A278E8E /* Pods-Pasteur.release.xcconfig */,
+				E7950704B4D01AF0732EDCA1 /* Pods-PasteurTests.debug.xcconfig */,
+				BD33543CA8B61055EAC899FA /* Pods-PasteurTests.release.xcconfig */,
+				BF966C269111F69F8468A5C9 /* Pods-PasteurUITests.debug.xcconfig */,
+				DE3FB6706D5CA6A728D61BB7 /* Pods-PasteurUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7A26FE21BED3FD600D5170A /* Build configuration list for PBXNativeTarget "Pasteur" */;
 			buildPhases = (
+				3BF2B94F050E1997D3FA0B93 /* Check Pods Manifest.lock */,
 				B7A26FB91BED3FD600D5170A /* Sources */,
 				B7A26FBA1BED3FD600D5170A /* Frameworks */,
 				B7A26FBB1BED3FD600D5170A /* Resources */,
+				EA5EA6F5DF839F32783CEA22 /* Embed Pods Frameworks */,
+				B62679B207E1D75C2EB6B24B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7A26FE51BED3FD600D5170A /* Build configuration list for PBXNativeTarget "PasteurTests" */;
 			buildPhases = (
+				4027818356978683A23CDF1D /* Check Pods Manifest.lock */,
 				B7A26FCA1BED3FD600D5170A /* Sources */,
 				B7A26FCB1BED3FD600D5170A /* Frameworks */,
 				B7A26FCC1BED3FD600D5170A /* Resources */,
+				8838876F5FF596E5DEDB5732 /* Embed Pods Frameworks */,
+				A8B4D54C0581DFB5DBF7490C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7A26FE81BED3FD600D5170A /* Build configuration list for PBXNativeTarget "PasteurUITests" */;
 			buildPhases = (
+				6F959AEA3C60A8DA64F5E7E2 /* Check Pods Manifest.lock */,
 				B7A26FD51BED3FD600D5170A /* Sources */,
 				B7A26FD61BED3FD600D5170A /* Frameworks */,
 				B7A26FD71BED3FD600D5170A /* Resources */,
+				183CCAFBEE72C780C452AEF2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +316,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		183CCAFBEE72C780C452AEF2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasteurUITests/Pods-PasteurUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BF2B94F050E1997D3FA0B93 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4027818356978683A23CDF1D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6F959AEA3C60A8DA64F5E7E2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8838876F5FF596E5DEDB5732 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasteurTests/Pods-PasteurTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8B4D54C0581DFB5DBF7490C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PasteurTests/Pods-PasteurTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B62679B207E1D75C2EB6B24B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pasteur/Pods-Pasteur-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA5EA6F5DF839F32783CEA22 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pasteur/Pods-Pasteur-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B7A26FB91BED3FD600D5170A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,6 +447,9 @@
 				B7A26FC31BED3FD600D5170A /* SharedBrowserViewController.swift in Sources */,
 				B70457451BEDAE06003EAAD4 /* SharedBrowser.swift in Sources */,
 				B7A26FC11BED3FD600D5170A /* AppDelegate.swift in Sources */,
+				B72C0FE31BEFBF48009D12F4 /* PasteurClient.swift in Sources */,
+				B73EFA221BF02644002A4D37 /* Clipboard.swift in Sources */,
+				B7AFCC001BEF36BE00C82E62 /* SocketsViewController.swift in Sources */,
 				B70457431BED9ADB003EAAD4 /* SharedPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +458,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73EFA201BF02500002A4D37 /* ClipboardSpec.swift in Sources */,
 				B7A26FD31BED3FD600D5170A /* PasteurTests.swift in Sources */,
+				B72C0FE51BEFD867009D12F4 /* ClipboardSyncronizerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +581,7 @@
 		};
 		B7A26FE31BED3FD600D5170A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1BFAD43E916A231F6FF493 /* Pods-Pasteur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -404,6 +594,7 @@
 		};
 		B7A26FE41BED3FD600D5170A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01D987B40D213ED34A278E8E /* Pods-Pasteur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -416,6 +607,7 @@
 		};
 		B7A26FE61BED3FD600D5170A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7950704B4D01AF0732EDCA1 /* Pods-PasteurTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -429,6 +621,7 @@
 		};
 		B7A26FE71BED3FD600D5170A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD33543CA8B61055EAC899FA /* Pods-PasteurTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -442,6 +635,7 @@
 		};
 		B7A26FE91BED3FD600D5170A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF966C269111F69F8468A5C9 /* Pods-PasteurUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PasteurUITests/Info.plist;
@@ -455,6 +649,7 @@
 		};
 		B7A26FEA1BED3FD600D5170A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE3FB6706D5CA6A728D61BB7 /* Pods-PasteurUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = PasteurUITests/Info.plist;
