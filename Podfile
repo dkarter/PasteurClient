@@ -10,6 +10,7 @@ end
 
 target 'Pasteur' do
   pod 'Starscream', '~> 1.0.0'
+  pod 'Socket.IO-Client-Swift', '~> 4.0.0'
 end
 
 target 'PasteurTests' do
