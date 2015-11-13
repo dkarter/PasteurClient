@@ -11,47 +11,66 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-  let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
-
+  private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
+  private let client:PasteurClient = PasteurClient(serverUrl: NSURL(string: "ws://localhost:8181")!)
+  private let notificationCenter = NSNotificationCenter.defaultCenter()
+  private var disconnectMenuItem:NSMenuItem = NSMenuItem()
   
   func applicationDidFinishLaunching(aNotification: NSNotification) {
-    statusItem.highlightMode = true
     if let button = statusItem.button {
       button.image = buildIcon()
+      setMenubarButtonState(button, highlighted: false)
       statusItem.menu = buildMenu()
     }
+    
+    notificationCenter.addObserver(self, selector: "handleConnectionStateChange", name: "ConnectionStateChanged", object: client)
+    
+    client.connect()
+  }
+ 
+  func handleConnectionStateChange() {
+    setMenubarButtonState(statusItem.button!, highlighted: client.isConnected())
+    let connectionStateText = client.isConnected() ? "connected to" : "disconnected from"
+    showNotification("Pasteur Server Connection", body: "Pasteur is now \(connectionStateText) the server")
   }
   
-  func buildIcon() -> NSImage {
+  private func disconnect(sender: AnyObject) {
+    client.disconnect()
+  }
+  
+  private func buildIcon() -> NSImage {
     let icon = NSImage(named: "AppIcon")
     icon!.size = NSSize(width: 22, height: 22)
     return icon!
   }
   
-  func buildMenu() -> NSMenu {
+  private func buildMenu() -> NSMenu {
     let menu = NSMenu()
-    menu.addItemWithTitle("Neptune.chi Clipboard", action: Selector("showNotification:"), keyEquivalent: "")
-    menu.addItemWithTitle("Chris Erin's Clipboard", action: Selector("logMessage:"), keyEquivalent: "")
+    menu.addItemWithTitle("Publish My Clipboard", action: Selector("publishClipboard:"), keyEquivalent: "P")
     menu.addItem(NSMenuItem.separatorItem())
-    menu.addItemWithTitle("Publish My Clipboard", action: Selector("logMessage:"), keyEquivalent: "P")
-    menu.addItem(NSMenuItem.separatorItem())
+    disconnectMenuItem = menu.addItemWithTitle("Disconnect", action: Selector("disconnect:"), keyEquivalent: "D")!
     menu.addItemWithTitle("Quit", action: Selector("terminate:"), keyEquivalent: "q")
     return menu
   }
     
-  func logMessage(sender: AnyObject) {
-    print(NSPasteboard.generalPasteboard().pasteboardItems![0].stringForType("public.utf8-plain-text"))
+  private func publishClipboard(sender: AnyObject) {
+    client.publishLocalClipboard()
   }
   
-  func showNotification(sender: AnyObject) {
+  private func showNotification(title: String, body: String) {
     let notification = NSUserNotification()
-    notification.title = "Test from Swift"
-    notification.informativeText = "The body of this Swift notification"
-    notification.actionButtonTitle = "Copy"
-    notification.otherButtonTitle = "Paste"
-    notification.setValue(true, forKey: "_showsButtons")
+    notification.title = title
+    notification.informativeText = body
     notification.soundName = NSUserNotificationDefaultSoundName
     NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
+  }
+  
+  private func setMenubarButtonState(button: NSStatusBarButton, highlighted: Bool) {
+    if highlighted {
+      button.alphaValue = 1
+    } else {
+      button.alphaValue = 0.3
+    }
   }
 }
 
