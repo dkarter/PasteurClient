@@ -938,7 +938,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <animations/>
-                                <scroller key="horizontalScroller" verticalHuggingPriority="750" doubleValue="0.051724137931034482" horizontal="YES" id="7KE-LM-5jf">
+                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="7KE-LM-5jf">
                                     <rect key="frame" x="1" y="348" width="413" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
