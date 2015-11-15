@@ -12,7 +12,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
-  private let client:PasteurClient = PasteurClient(serverUrl: NSURL(string: "ws://localhost:8181")!)
+  private let client:PasteurClient = PasteurClient(serverUrl: NSURL(string: "localhost:3000")!)
   private let notificationCenter = NSNotificationCenter.defaultCenter()
   private var disconnectMenuItem:NSMenuItem = NSMenuItem()
   
